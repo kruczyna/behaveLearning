@@ -15,6 +15,6 @@ git clone git@github.com:kruczyna/behaveLearning.git
 2. all features, alphabetical order:
   * behave
 
-#Configuration: .feature files
+# Configuration: .feature files
 * all string enclosed in double quotes are step parameters and can be changed
 * **WARNING**: some of them are selectors, change with caution

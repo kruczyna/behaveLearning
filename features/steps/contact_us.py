@@ -20,3 +20,14 @@ def contact_us_click(context):
 	short_wait(context.driver, selectors.order_reference)
 	short_wait(context.driver, selectors.email_address)
 	short_wait(context.driver, selectors.attach_file)
+
+
+@given('I click Send button')
+def send_button_click(context):
+	send_button = context.driver.find_element(*selectors.send_button)
+	send_button.click()
+
+
+@then('I see Invalid email address error')
+def invalid_form_message(context):
+	short_wait(context.driver, selectors.form_error)

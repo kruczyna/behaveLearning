@@ -10,3 +10,8 @@ Feature: Contact Us
 	Scenario: I want to see blank Contact Us form error
 		Given I click Send button
 		Then I see Invalid email address error
+
+	Scenario: I want to see email input error
+		Given I input "testInput" in email field
+		And I click on Contact Us body
+		Then I see email input error

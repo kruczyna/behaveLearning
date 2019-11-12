@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 
-# main buttons
+# MAIN UI
+page_body = (By.CSS_SELECTOR, '#page')
+
+# MAIN BUTTONS
 contact_us = (By.CSS_SELECTOR, '#contact-link')
 
 # CONTACT US
@@ -11,6 +14,7 @@ order_reference = (By.CSS_SELECTOR, '#id_order')
 attach_file = (By.CSS_SELECTOR, '#uniform-fileUpload')
 
 form_error = (By.CSS_SELECTOR, '.alert.alert-danger')
+field_error = 'rgba(241, 51, 64, 1)'
 
 # page buttons
 send_button = (By.CSS_SELECTOR, '#submitMessage')

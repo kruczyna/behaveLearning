@@ -59,3 +59,7 @@ def email_input_error(context):
 
 	assert css_value == field_error
 
+
+@then('I see form error')
+def empty_message_error(context):
+	context.driver.find_element(*selectors.form_error)

@@ -15,3 +15,8 @@ Feature: Contact Us
 		Given I input "testInput" in email field
 		And I click on Contact Us body
 		Then I see email input error
+
+	Scenario: I want to see empty message error
+		Given I input "mail@mail.com" in email field
+		And I click Send button
+		Then I see form error

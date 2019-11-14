@@ -1,4 +1,4 @@
-from behave import given, then, step
+from behave import given, then, step, when
 from selenium.webdriver.support.color import Color
 from colour import Color
 
@@ -25,7 +25,7 @@ def contact_us_click(context):
 	short_wait(context.driver, selectors.attach_file)
 
 
-@given('I click Send button')
+@step('I click Send button')
 def send_button_click(context):
 	send_button = context.driver.find_element(*selectors.send_button)
 	send_button.click()
@@ -63,3 +63,24 @@ def email_input_error(context):
 @then('I see form error')
 def empty_message_error(context):
 	context.driver.find_element(*selectors.form_error)
+
+
+@step('I input "{field_input}" in message field')
+def input_message_field(context, field_input):
+	message_field = context.driver.find_element(*selectors.message_textarea)
+	message_field.click()
+	message_field.send_keys(field_input)
+
+
+@step('I select message subject')
+def select_subject(context):
+	select_field = context.driver.find_element(*selectors.subject_heading)
+	select_field.click()
+	select_customer_service = context.driver.find_element(*selectors.select_customer_service)
+	select_customer_service.click()
+
+
+@then('I see form success')
+def form_success(context):
+	short_wait(context.driver, selectors.form_success)
+	# context.driver.find_element(*selectors.form_success)

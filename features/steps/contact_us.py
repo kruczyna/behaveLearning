@@ -1,5 +1,6 @@
 from behave import given, then, step
-from selenium.webdriver.support import color
+from selenium.webdriver.support.color import Color
+from colour import Color
 
 import features.steps.common_selectors as selectors
 from steps.common_actions import short_wait
@@ -54,6 +55,7 @@ def email_input_error(context):
 	email_field = context.driver.find_element(*selectors.email_address)
 	field_error = selectors.field_error
 	email_field_color = email_field.value_of_css_property('color')
-	print(field_error)
-	print(email_field_color)
-	assert field_error is email_field_color
+	css_value = context.driver.find_element(*selectors.email_address).value_of_css_property("color")
+
+	assert css_value == field_error
+

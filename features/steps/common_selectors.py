@@ -12,6 +12,7 @@ subject_heading = (By.CSS_SELECTOR, '#uniform-id_contact')
 email_address = (By.CSS_SELECTOR, '#email')
 order_reference = (By.CSS_SELECTOR, '#id_order')
 attach_file = (By.CSS_SELECTOR, '#uniform-fileUpload')
+message_textarea = (By.CSS_SELECTOR, '#message')
 
 form_error = (By.CSS_SELECTOR, '.alert.alert-danger')
 field_error = 'rgba(241, 51, 64, 1)'

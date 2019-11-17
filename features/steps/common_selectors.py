@@ -5,6 +5,7 @@ page_body = (By.CSS_SELECTOR, '#page')
 
 # MAIN BUTTONS
 contact_us = (By.CSS_SELECTOR, '#contact-link')
+sign_in = (By.CSS_SELECTOR, '.login')
 
 # CONTACT US
 # page UI elements
@@ -21,3 +22,19 @@ field_error = 'rgba(241, 51, 64, 1)'
 
 # page buttons
 send_button = (By.CSS_SELECTOR, '#submitMessage')
+
+# SIGN IN
+submit_login = (By.CSS_SELECTOR, '#SubmitLogin')
+create_account = (By.CSS_SELECTOR, '#SubmitCreate')
+
+password_field = (By.CSS_SELECTOR, '#passwd')
+user_info = (By.CSS_SELECTOR, '.header_user_info')
+
+# MY ACCOUNT
+orders_button = (By.CSS_SELECTOR, 'a[title="Orders"]')
+credit_slips_button = (By.CSS_SELECTOR, 'a[title="Credit slips"]')
+wishlist_button = (By.CSS_SELECTOR, 'a[title="My wishlists"]')
+addresses_button = (By.CSS_SELECTOR, 'a[title="Addresses"]')
+personal_info_button = (By.CSS_SELECTOR, 'a[title="Information"]')
+
+sign_out_button = (By.CSS_SELECTOR, 'a[title="Log me out"]')

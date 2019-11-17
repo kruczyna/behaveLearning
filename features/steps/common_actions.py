@@ -5,7 +5,7 @@ from typing import Tuple
 import features.steps.storage as storage
 
 
-def short_wait(web_driver: driver, selector: Tuple) -> None:
+def medium_wait(web_driver: driver, selector: Tuple) -> None:
     """
     Wait for an element to appear in browser. Time value configurable in storage.py
     """

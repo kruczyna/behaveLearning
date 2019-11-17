@@ -1,12 +1,10 @@
-from behave import given, then, step, when
-from selenium.webdriver.support.color import Color
-from colour import Color
+from behave import given, then, step
 
 import features.steps.common_selectors as selectors
-from steps.common_actions import short_wait
+from steps.common_actions import medium_wait
 
 
-@given('I land on home screen')
+@step('I land on home screen')
 def main_page(context):
 	context.driver.get('http://automationpractice.com/index.php')
 
@@ -19,10 +17,10 @@ def contact_us_click(context):
 
 @then('I am on CONTACT US page')
 def contact_us_click(context):
-	short_wait(context.driver, selectors.subject_heading)
-	short_wait(context.driver, selectors.order_reference)
-	short_wait(context.driver, selectors.email_address)
-	short_wait(context.driver, selectors.attach_file)
+	medium_wait(context.driver, selectors.subject_heading)
+	medium_wait(context.driver, selectors.order_reference)
+	medium_wait(context.driver, selectors.email_address)
+	medium_wait(context.driver, selectors.attach_file)
 
 
 @step('I click Send button')
@@ -82,5 +80,4 @@ def select_subject(context):
 
 @then('I see form success')
 def form_success(context):
-	short_wait(context.driver, selectors.form_success)
-	# context.driver.find_element(*selectors.form_success)
+	medium_wait(context.driver, selectors.form_success)

@@ -31,7 +31,7 @@ def send_button_click(context):
 
 @then('I see Invalid email address error')
 def invalid_form_message(context):
-	short_wait(context.driver, selectors.form_error)
+	medium_wait(context.driver, selectors.form_error)
 
 
 @given('I input "{input_string}" in email field')

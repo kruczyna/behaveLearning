@@ -27,3 +27,18 @@ Feature: Login
       And I input "invalid_password" in password field
       When I click Sign In button
       Then I see form error
+
+    Scenario: I want to see login error when email is missing
+      Given I click main Sign In button
+      And I am on SIGN IN page
+      And I input "invalid_password" in password field
+      When I click Sign In button
+      Then I see form error
+
+    Scenario: I want to see login error when password is missing
+      Given I click main Sign In button
+      And I am on SIGN IN page
+      And I input "mail@mail.com" in email field
+      When I click Sign In button
+      Then I see form error
+
